@@ -66,7 +66,7 @@ dnf install -y openjpeg2-devel lcms2-devel tcl-devel tk-devel fribidi-devel re2-
 dnf remove -y centos-gpg-keys-9.0-24.el9.noarch centos-stream-repos-9.0-24.el9.noarch 
 
 dnf install -y git gcc-toolset-13 kmod jq \
-    numactl-devel libtiff-devel ninja \
+    numactl-devel libtiff-devel ninja-build \
     libimagequant-devel libxcb-devel zeromq-devel \
     llvm llvm-devel clang clang-devel cmake \
     python$PYTHON_VERSION-devel \
