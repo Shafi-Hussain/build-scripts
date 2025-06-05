@@ -61,7 +61,7 @@ dnf config-manager --add-repo https://mirror.stream.centos.org/9-stream/BaseOS/`
 dnf config-manager --add-repo https://mirror.stream.centos.org/9-stream/AppStream/`arch`/os
 dnf config-manager --set-enabled crb
 # install whatever is required from centos
-dnf install -y openjpeg2-devel lcms2-devel tcl-devel tk-devel fribidi-devel re2-devel
+dnf install -y openjpeg2-devel lcms2-devel tcl-devel tk-devel fribidi-devel re2-devel utf8proc-devel
 # delete centos stuff to avoid conflicts
 dnf remove -y centos-gpg-keys-9.0-24.el9.noarch centos-stream-repos-9.0-24.el9.noarch 
 
@@ -262,7 +262,7 @@ fi
 
 # test dependencies (re2-devel installed with centos mirrors)
 # dnf install -y re2-devel utf8proc-devel
-dnf install -y utf8proc-devel
+# dnf install -y utf8proc-devel
 
 # transformers 4.51 has an import bug -> already fixed on main branch and will be fixed in next release
 # python -m pip install -v pytest pytest-asyncio sentence-transformers 'transformers<4.51'
