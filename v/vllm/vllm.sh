@@ -184,7 +184,7 @@ if [ -z $BUILD_DEPS ] || [ $BUILD_DEPS == True ]; then
     # patch applicable only for opencv-python version 4.11.0.86
     OPENCV_PATCH=97f3f39
     cd $DEPS_DIR/opencv-python
-    sed -i -E -e 's/"setuptools.+",/"setuptools",/g'
+    sed -i -E -e 's/"setuptools.+",/"setuptools",/g' pyproject.toml
     cd opencv && git cherry-pick --no-commit $OPENCV_PATCH
 
     ##########################################
